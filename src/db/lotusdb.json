@@ -1,0 +1,707 @@
+{
+    "banner": [
+        {
+            "id": 1, 
+            "ban_title": "banner1",
+            "image":"bg-photo6.jpg"
+        },
+        {
+            "id": 2, 
+            "ban_title": "banner2",
+            "image":"bg-photo1.jpg"
+        },
+        {
+            "id": 3, 
+            "ban_title": "banner3",
+            "image":"handtools-bg.png"
+        }
+    ],
+    "products": [
+        {
+            "id":1,
+            "prod_code":"LT4-80F2DX",
+            "prod_name": "Flap Disc (FLEX) 4\" G80",
+            "prod_price": "59.00",
+            "prod_img":"acc.jpg",
+            "promos":null,
+            "stocks": 25,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":2,
+            "prod_code":"LTX110-20MWX",
+            "prod_name": "Carbide Wheel",
+            "prod_price": "129.00",
+            "prod_img":"acc1.jpg",
+            "promos":null,
+            "stocks": 17,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":3,
+            "prod_code":"LT4-100FDX",
+            "prod_name": "Flap Disc 4\" G100",
+            "prod_price": "59.00",
+            "prod_img":"acc2.jpg",
+            "promos":"on-sale",
+            "stocks": 33,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":4,
+            "prod_code":"LTX200CBX",
+            "prod_name": "Circular Brush 8\"",
+            "prod_price": "240.00",
+            "prod_img":"acc3.jpg",
+            "promos":null,
+            "stocks": 3,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":5,
+            "prod_code":"LDCW04R",
+            "prod_name": "Diamond Cup Wheel (RIM) 4",
+            "prod_price":"659.00",
+            "prod_img":"acc4.jpg",
+            "promos":null,
+            "stocks": 0,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":6,
+            "prod_code":"LTXT500BPX",
+            "prod_name": "Brad Point Drill Bit 5x",
+            "prod_price": "349.00",
+            "prod_img":"acc5.jpg",
+            "promos":null,
+            "stocks": 29,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":7,
+            "prod_code":"LTXT500CSD/H",
+            "prod_name": "Countersink Bit Hex 5x",
+            "prod_price": "299.00",
+            "prod_img":"acc6.jpg",
+            "promos":null,
+            "stocks": 13,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":8,
+            "prod_code":"LTXT600CBX",
+            "prod_name": "Countersink Bit 90° 6x",
+            "prod_price": "699.00",
+            "prod_img":"acc7.jpg",
+            "promos":null,
+            "stocks": 12,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":9,
+            "prod_code":"LTXT600CBX",
+            "prod_name": "Countersink Bit 90° 6x",
+            "prod_price": "799.00",
+            "prod_img":"acc8.jpg",
+            "promos":null,
+            "stocks": 4,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":10,
+            "prod_code":"LTXT300DBX",
+            "prod_name": "Bit & Tox Set 300pc",
+            "prod_price": "999.00",
+            "prod_img":"acc9.jpg",
+            "promos":"on-sale",
+            "stocks": 5,
+            "badge":null,
+            "prod_category":"accessories",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":11,
+            "prod_code":"LTHT16-33BT",
+            "prod_name": "Tool Bag with 33 Pockets 16\"",
+            "prod_price": "1,999.00",
+            "prod_img":"bag1.jpg",
+            "promos":"on-sale",
+            "stocks": 7,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":12,
+            "prod_code":"LTHT12-4BT",
+            "prod_name": "Tool Bag with 4 Pockets 12\"",
+            "prod_price": "1,499.00",
+            "prod_img":"bag2.jpg",
+            "promos":"on-sale",
+            "stocks": 9,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":13,
+            "prod_code":"LTHT14-4BT",
+            "prod_name": "Tool Bag with 4 Pockets 4\"",
+            "prod_price": "699.00",
+            "prod_img":"bag3.jpg",
+            "promos":null,
+            "stocks": 7,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":14,
+            "prod_code":"LLNP175DF",
+            "prod_name": "Long Nose Plier Eco 7\"",
+            "prod_price": "349.00",
+            "prod_img":"htools.jpg",
+            "promos":null,
+            "stocks": 23,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":15,
+            "prod_code":"LCP200DF",
+            "prod_name": "Combination Plier Eco 8\"",
+            "prod_price": "349.00",
+            "prod_img":"htools1.jpg",
+            "promos":null,
+            "stocks": 19,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":16,
+            "prod_code":"LHK008S",
+            "prod_name": "Hex Ring Set Imperial 8pcs",
+            "prod_price": "149.00",
+            "prod_img":"htools2.jpg",
+            "promos":null,
+            "stocks": 34,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":17,
+            "prod_code":"LTHT2400PWX",
+            "prod_name": "Pipe Wrench 24\"",
+            "prod_price": "149.00",
+            "prod_img":"htools3.jpg",
+            "promos":null,
+            "stocks": 29,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":18,
+            "prod_code":"LTPP100R",
+            "prod_name": "Locking Pliers 10R",
+            "prod_price": "449.00",
+            "prod_img":"htools4.jpg",
+            "promos":null,
+            "stocks": 18,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":19,
+            "prod_code":"LTHTSS900X",
+            "prod_name": "Scredriver Set Pro 9pcs",
+            "prod_price": "449.00",
+            "prod_img":"htools5.jpg",
+            "promos":"on-sale",
+            "stocks": 21,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":20,
+            "prod_code":"LTHT26STH",
+            "prod_name": "T-Handle Screwdriver 26pcs",
+            "prod_price": "999.00",
+            "prod_img":"htools7.jpg",
+            "promos":"on-sale",
+            "stocks": 12,
+            "badge":null,
+            "prod_category":"hand tools",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":21,
+            "prod_code":"LT2000TPX",
+            "prod_name": "Thickness Planer 2KW (Helix)",
+            "prod_price": "41,999.00",
+            "prod_img":"item.jpg",
+            "promos":null,
+            "stocks": 8,
+            "badge":null,
+            "prod_category":"power tools",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":22,
+            "prod_code":"LTBH600DRE",
+            "prod_name": "Rotary Hammer 2Kg with Case",
+            "prod_price": "6,499.00",
+            "prod_img":"powertools1.jpg",
+            "promos":"on-sale",
+            "stocks": 15,
+            "badge":null,
+            "prod_category":"power tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":23,
+            "prod_code":"LTCS140X",
+            "prod_name": "Circular Saw Pro 1400W",
+            "prod_price": "5,499.00",
+            "prod_img":"powertools3.jpg",
+            "promos":null,
+            "stocks": 13,
+            "badge":null,
+            "prod_category":"power tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":24,
+            "prod_code":"LT3CTX",
+            "prod_name": "Air Cut Off Tool 3\"",
+            "prod_price": "2,499.00",
+            "prod_img":"powertools4.jpg",
+            "promos":"on-sale",
+            "stocks": 21,
+            "badge":null,
+            "prod_category":"power tools",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":25,
+            "prod_code":"LTCM12CX",
+            "prod_name": "Miter Saw (Dual Bevel) 12\"",
+            "prod_price": "14,499.00",
+            "prod_img":"powertools5.jpg",
+            "promos":null,
+            "stocks": 17,
+            "badge":null,
+            "prod_category":"power tools",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":26,
+            "prod_code":"LTTG1400",
+            "prod_name": "Tig Gloves 14\"",
+            "prod_price": "2,499.00",
+            "prod_img":"safety3.jpg",
+            "promos":null,
+            "stocks": 23,
+            "badge":null,
+            "prod_category":"power tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":27,
+            "prod_code":"LTSX13CG",
+            "prod_name": "Comfort Grip Gloves",
+            "prod_price": "149.00",
+            "prod_img":"safety2.jpg",
+            "promos":"on-sale",
+            "stocks": 44,
+            "badge":null,
+            "prod_category":"safety gears",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":28,
+            "prod_code":"LSCG600Y",
+            "prod_name": "Rubber Gloves",
+            "prod_price": "49.00",
+            "prod_img":"safety4.jpg",
+            "promos":"on-sale",
+            "stocks": 44,
+            "badge":null,
+            "prod_category":"safety gears",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":29,
+            "prod_code":"LTMG1815",
+            "prod_name": "Mechanic Gloves",
+            "prod_price": "249.00",
+            "prod_img":"safety5.jpg",
+            "promos":null,
+            "stocks": 44,
+            "badge":null,
+            "prod_category":"safety gears",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":30,
+            "prod_code":"LTSX13CG",
+            "prod_name": "Comfort Grip Gloves",
+            "prod_price": "149.00",
+            "prod_img":"safety2.jpg",
+            "promos":"on-sale",
+            "stocks": 44,
+            "badge":null,
+            "prod_category":"safety gears",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":31,
+            "prod_code":"LTST1800X",
+            "prod_name": "Carbon Brush for Table Saw",
+            "prod_price": "149.00",
+            "prod_img":"spare1.jpg",
+            "promos":null,
+            "stocks": 44,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":32,
+            "prod_code":"LTHD16RE",
+            "prod_name": "Carbon Brush LTHD16RE-17",
+            "prod_price": "129.00",
+            "prod_img":"spare2.jpg",
+            "promos":null,
+            "stocks": 44,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":33,
+            "prod_code":"LTCS1500X",
+            "prod_name": "Carbon Brush LTCS1500X-48",
+            "prod_price": "169.00",
+            "prod_img":"spare3.jpg",
+            "promos":null,
+            "stocks": 22,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":34,
+            "prod_code":"LRT170C",
+            "prod_name": "Field Coil LRT170C-12",
+            "prod_price": "469.00",
+            "prod_img":"spare5.jpg",
+            "promos":null,
+            "stocks": 14,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":35,
+            "prod_code":"LTPL6500-41",
+            "prod_name": "Field Coil",
+            "prod_price": "569.00",
+            "prod_img":"spare7.jpg",
+            "promos":null,
+            "stocks": 8,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":36,
+            "prod_code":"LTRH3007 Rotary Hammer",
+            "prod_name": "Armature LTRH3007-68",
+            "prod_price": "469.00",
+            "prod_img":"spare8.jpg",
+            "promos":null,
+            "stocks": 11,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":37,
+            "prod_code":"LRT170C",
+            "prod_name": "Armature LRT170C-8",
+            "prod_price": "569.00",
+            "prod_img":"spare9.jpg",
+            "promos":"on-sale",
+            "stocks": 11,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":38,
+            "prod_code":"LMS255",
+            "prod_name": "Armature LMS255-14",
+            "prod_price": "399.00",
+            "prod_img":"spare9.jpg",
+            "promos":"on-sale",
+            "stocks": 11,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":39,
+            "prod_code":"LID13REN18",
+            "prod_name":"Armature for LID13RE TY-2",
+            "prod_price": "399.00",
+            "prod_img":"spare11.jpg",
+            "promos":null,
+            "stocks": 15,
+            "badge":null,
+            "prod_category":"spare parts",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":40,
+            "prod_code":"LTGT100SHX",
+            "prod_name":"Survivor's Shovel",
+            "prod_price": "499.00",
+            "prod_img":"garden1.jpg",
+            "promos":"on-sale",
+            "stocks": 21,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":41,
+            "prod_code":"LTSS2000M",
+            "prod_name":"Steel Shovel Spade",
+            "prod_price": "599.00",
+            "prod_img":"garden2.jpg",
+            "promos":null,
+            "stocks": 19,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":42,
+            "prod_code":"LT40BX/2S",
+            "prod_name":"Brush Cutter (2 Stroke)",
+            "prod_price": "12,999.00",
+            "prod_img":"garden3.jpg",
+            "promos":null,
+            "stocks": 19,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"New Arrival"
+        },
+        {
+            "id":43,
+            "prod_code":"LTGT360GSX",
+            "prod_name":"Grass Shears 360°",
+            "prod_price": "749.00",
+            "prod_img":"garden4.jpg",
+            "promos":null,
+            "stocks": 24,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":44,
+            "prod_code":"LTGT3RSX",
+            "prod_name":"Rotating Sprinkler 3 Arm+Base",
+            "prod_price": "349.00",
+            "prod_img":"garden5.jpg",
+            "promos":null,
+            "stocks": 41,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":45,
+            "prod_code":"LTGT8PPX",
+            "prod_name":"Precision Pruner",
+            "prod_price": "449.00",
+            "prod_img":"garden6.jpg",
+            "promos":"on-sale",
+            "stocks": 56,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":46,
+            "prod_code":"LTGT300GTX",
+            "prod_name":"Mini Garden Tool Set",
+            "prod_price": "749.00",
+            "prod_img":"garden7.jpg",
+            "promos":null,
+            "stocks": 26,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"Best Seller"
+        },
+        {
+            "id":47,
+            "prod_code":"LTGT150GHX",
+            "prod_name":"Garden Hose 1/2X50FT",
+            "prod_price": "1,299.00",
+            "prod_img":"garden10.jpg",
+            "promos":null,
+            "stocks": 12,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"Old Item"
+        },
+        {
+            "id":48,
+            "prod_code":"LTGT3RSX",
+            "prod_name":"Rotating Sprinkler 3 Arm+Base",
+            "prod_price": "349.00",
+            "prod_img":"garden5.jpg",
+            "promos":null,
+            "stocks": 41,
+            "badge":null,
+            "prod_category":"garden tools",
+            "prod_description":"Best Seller"
+        }
+    ],  
+    "partner_physical-stores":[
+        {
+            "id":1,
+            "store-name":"true-value",
+            "logo":"truevalue-logo.png"
+        },
+        {
+            "id":2,
+            "store-name":"wilcon",
+            "logo":"wilcon-logo.jpg"
+        },
+        {
+            "id":3,
+            "store-name":"handyman",
+            "logo":"handyman-logo.png"
+        },
+        {
+            "id":4,
+            "store-name":"citi-hardware",
+            "logo":"citihardwarre-logo.jpg"
+        },
+        {
+            "id":5,
+            "store-name":"mc-homedepo",
+            "logo":"mchome-logo.jpg"
+        },
+        {
+            "id":6,
+            "store-name":"all-home",
+            "logo":"AllHome-logo.jpg"
+        }
+    ],
+    "partner_online-stores":[
+        {
+            "id":1,
+            "store-name":"lazada",
+            "logo":"https://logolook.net/wp-content/uploads/2022/01/Lazada-Logo.png"
+        },
+        {
+            "id":2,
+            "store-name":"shopee",
+            "logo":"https://www.philretailers.com/wp-content/uploads/2018/02/shopee-logo.png"
+        },
+        {
+            "id":3,
+            "store-name":"tiktok-shop",
+            "logo":"https://brandlogos.net/wp-content/uploads/2022/05/tiktok_shop-logo_brandlogos.net_5ewfz.png"
+        }
+    ],
+    "contacts":[
+        {
+            "id":1,
+            "contact":"(02)8-921-0000"
+        },
+        {
+            "id":1,
+            "contact":"(02)8-928-0000"
+        }
+    ],
+    "payment_cards":[
+        {
+            "id":1,
+            "card-name":"gcash",
+            "image":"icons8-gcash-100.png"
+        },
+        {
+            "id":2,
+            "card-name":"mastercard",
+            "image":"icons8-mastercard-48.png"
+        },
+        {
+            "id":3,
+            "card-name":"debitcard",
+            "image":"icons8-debit-card-64.png"
+        },
+        {
+            "id":4,
+            "card-name":"visacard",
+            "image":"icons8-visa-50.png"
+        }
+    ],
+    "payment-delivery_courier":[
+        {
+            "id":1,
+            "courier_name":"grab",
+            "image":"grab.png"
+        },
+        {
+            "id":1,
+            "courier_name":"lbc",
+            "image":"lbc.jpg"
+        },
+        {
+            "id":1,
+            "courier_name":"j&t",
+            "image":"JT-Express-Logo-768x432.png"
+        },
+        {
+            "id":1,
+            "courier_name":"lalamove",
+            "image":"Lalamove-Logo-768x432.png"
+        }
+    ],
+    "heros": [
+        {
+            "id":1,
+            "hero-title":"hero1",
+            "image":"hero3.jpg"
+        }
+    ]
+}
