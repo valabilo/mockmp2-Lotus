@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap"
+import { Container, Button } from "react-bootstrap"
 
 function SignIn () {
     return (
@@ -8,7 +8,7 @@ function SignIn () {
                     <img class="mx-auto mb-3" width="100" src="https://cdn-icons-png.flaticon.com/512/0/191.png" alt="..."/>
                     <h2 class="si-font si-text-size fw-lighter" >JOIN MyLOTUS</h2>
                     <p>Join <span class="fw-bolder">MyLOTUS</span> to register your tools to receive discount vouchers or Lotus products and learn about the newest LOTUS tools and accessories.</p>
-                    <a class="feat-btn btn btn-warning" href="Create-Account.html">Sign In</a>
+                    <Button variant="warning" class="feat-btn " href="/register">Sign In</Button>
                 </div>
         </Container>
     )

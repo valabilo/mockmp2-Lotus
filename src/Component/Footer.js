@@ -1,8 +1,31 @@
 import { Container, Nav, Col, Row, Form, Button } from "react-bootstrap";
 import logo from '../assets/logo.jpg'
 import phone from '../assets/phone-icon.png'
+import React,{ useEffect, useState, } from "react";
 
 function Footer () {
+    const date =  new Date().getFullYear();
+    const API_URL = 'http://localhost:5001/contacts'
+    const [contacts, setContacts] = useState([]);
+    const [fetchError, setFetchError] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect( ()=>{
+    const fetchItems = async () => { 
+    try { 
+        const response = await fetch(API_URL);
+        if(!response.ok) throw Error('No data');
+        const listItems = await response.json();
+        setContacts(listItems);
+    } catch(e){
+        console.log(e.message);
+        setFetchError(e.message)      
+    } finally{
+        setIsLoading(false)
+    }}
+    setTimeout(()=>{
+        (async ()=> await fetchItems())();
+    }, 300); //1k is 1 second
+    }, []); //it will execute onpage load
     return (
         <section className="mt-3 px-0">
             <Container fluid className=" ban">
@@ -20,10 +43,10 @@ function Footer () {
                     <div class="footer-support">
                         <h3 class="foot-font">Support</h3>
                         <hr class="ms-4"/>
-                        <Nav.Link href="#"><p>Service Center</p></Nav.Link>
-                        <p><Nav.Link href="#">Product Registration</Nav.Link></p>
-                        <p><Nav.Link href="#">Warranty Informations</Nav.Link></p>
-                        <p><Nav.Link href="#">FAQs</Nav.Link></p>
+                        <Nav.Link href="/"><p>Service Center</p></Nav.Link>
+                        <p><Nav.Link href="/">Product Registration</Nav.Link></p>
+                        <p><Nav.Link href="/">Warranty Informations</Nav.Link></p>
+                        <p><Nav.Link href="/">FAQs</Nav.Link></p>
                     </div>
                 </Col>
                 <Col md={4}>
@@ -34,20 +57,27 @@ function Footer () {
                             <p><Nav.Link href="">Why Lotus</Nav.Link></p>
                             <p><Nav.Link href="">Featured Articles</Nav.Link></p>
                         </div>
-                        <div>
+                        
+                        <div >
                         <h3 class="footer-contact foot-font">Contact Us</h3>
                             <hr class="ms-4"/>
                             <div>
-                            <div class="col-md-4 d-flex gap-1">
+                            { isLoading && <p> Loading Items please wait... </p> } 
+                            { fetchError && <p style={ {color:"red" }}> { fetchError } </p> } 
+                            { contacts.map( (contact)=>(
+                            <div class="col-md-4 d-flex gap-1" key={contact.id}>
                                 <img width="20px" height="20px" src={phone} alt=""/>
-                                <p class="text-nowrap">(02)8-921-0000</p>
+                                <p class="text-nowrap">{contact.contact}</p>
                             </div>
-                            <div class="col-md-4 d-flex gap-1">
+                            ))}
+                            {/* <div class="col-md-4 d-flex gap-1">
                                 <img width="20px" height="20px" src={phone} alt=""/>
-                                <p class="text-nowrap">(02)8-921-0000</p>
-                            </div>
+                                <p class="text-nowrap">{contact}</p>
+                            </div> */}
+                            
                             </div>
                         </div>
+                        
                         <div>
                             <h3 class="foot-font">Follow Us</h3>
                         </div>
@@ -67,10 +97,11 @@ function Footer () {
                 </Col>
                 <Col md={4}>
                     <div className="foot">
-                        <Form className="footer-form" action="">
-                                <h3 className="foot-font">Email Sign up</h3>
+                        <Form className="footer-form">
+                            <h3 className="foot-font">Email Sign up</h3>
                                 <p className="my-1">Sign up to receive the latest info on new LOTUS products, special offers and more.</p>
                                 <table>
+                                    <thead>
                                 <tr>
                                     <td className="td1">
                                         <label for="" class="col-sm-5 col-form-label">First Name</label>
@@ -94,6 +125,7 @@ function Footer () {
                                        </div>
                                     </td>
                                 </tr>
+                                </thead>
                                 </table>
                         </Form>
                     </div>
@@ -105,7 +137,7 @@ function Footer () {
             </div>
             <div class="footer-ann bg-dark">
             <div class="col-md-3"><h2 class="ms-2 px-5 py-2 textt-wrap">© Lotus Philippines</h2></div>
-            <div class="col-md-9"><h2 class="ms-2 px-5 py-2">ALL RIGHTS RESERVED 2023</h2></div>
+            <div class="col-md-9"><h2 class="ms-2 px-5 py-2">ALL RIGHTS RESERVED {date}</h2></div>
         </div>
         </section>
     );

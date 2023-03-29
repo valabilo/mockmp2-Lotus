@@ -1,11 +1,8 @@
-import React,{ useEffect, useState, } from "react";
-import Slider from 'react-slick';
-import { Container, Card, Col, Row, Button, Nav} from "react-bootstrap";
-
+import { Container, Nav, Row, Col, Card, Dropdown, Button, DropdownButton} from "react-bootstrap";
+import React from 'react';
 import CarouselImg from '../../db/lotusdb.json'
 
-
-function Features () {
+function PowerToolsPost () {
     const API_URL = 'http://localhost:5001/products';
     const [products, setProducts] = useState([]);
     const [fetchError, setFetchError] = useState(null);
@@ -28,101 +25,52 @@ function Features () {
     }, 300); //1k is 1 second
     }, []); //it will execute onpage load
 
-    
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePreviousArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 912,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-          className:"mx-5 gap-5",
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          initialSlide: 2,
-          className:"mx-5",
-        },
-      },
-      {
-        breakpoint: 609,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-          className:"mx-5",
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+  
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "grey", borderRadius: 13}}
-        onClick={onClick}
-      />
-    );
-  };
-function SamplePreviousArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "grey", borderRadius: 13}}
-        onClick={onClick}
-      />
-    );
-  };
-  return (
-    <Container 
-      className="px-3">
-      <h2 
-        className="fw-bolder feat-font text-start py-5 px-3"> 
-        FEATURED PRODUCTS
-      </h2>
-      <Slider {...settings}>
+      <Container fluid className="mx-auto">
+          <div className="mx-auto">
+          <h1 class="feat-font w-50 mx-auto mb-0">ALL PRODUCTS</h1>
+          </div>
+          <div class="container mt-0">
+              <Row>
+                  <Col md={3} class="pt-2 ps-5">
+                      <h3 class="foot-font">PRODUCT CATEGORIES</h3>
+                      <hr class="me-3"/> 
+                      <Nav.Link href="/products"><p class="mt-3">All Products</p></Nav.Link>
+                      <Nav.Link href="/products/powertools" active><p class="mt-3">Power Tools</p></Nav.Link>
+                      <Nav.Link href="/products/handtools"><p>Hand Tools</p></Nav.Link>
+                      <Nav.Link href="/products/gardentools"><p>Garden tools</p></Nav.Link>
+                      <Nav.Link href="/products/accessories"><p>Accessories</p></Nav.Link>
+                      <Nav.Link href="/products/safetygears"><p>Safety Gears</p></Nav.Link>
+                      <Nav.Link href="/products/spareparts"><p>Spare Parts</p></Nav.Link>
+                  </Col>
+        <Col md={9}>
+          <Container >
+            <Row>
+              <Col md={10}>
+              </Col>
+              <Col md={2}>
+            <Dropdown className="d-inline">
+              <Dropdown.Toggle  variant="outline-success" id="dropdown-autoclose-true" className="float-right">
+                Sort
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#">Electric Saw</Dropdown.Item>
+                <Dropdown.Item href="#">Drills</Dropdown.Item>
+                <Dropdown.Item href="#">Cordless</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+              </Col>
+            </Row>
+          </Container>
+        <Row>
         { isLoading && <p> Loading Items please wait... </p> } 
           { fetchError && <p style={ {color:"red" }}> { fetchError } </p> } 
-            { CarouselImg && products.filter(products => products.prod_description === "New Arrival").map( (filteredProducts)=>(
-            <Row 
-              xs={1} md={1} 
-              className="g-2 px-3 mt-2 align-items-stretch" 
-              key={filteredProducts.id}>
-              <Col 
-                className="d-flex align-items-stretch">
+            { CarouselImg && products.filter(products => products.prod_category === "power tools").map( (filteredProducts)=>(
+          <Col xs={12} md={6} lg={4} key={filteredProducts.id}>
+              <Container fluid className="my-2">
                   <Card 
-                    // style={{height: 200em}}
-                    className="card-size border-0 ">
+                    className=" border-0 ">
                     <Card.Img 
                       variant="top"
                       className="img-zoom"
@@ -168,11 +116,14 @@ function SamplePreviousArrow(props) {
                       </Button>
                     </Card.Footer>
                   </Card>
-                </Col>
-              </Row>
-          ))}
-        </Slider>
-    </Container>
-  );
-}
-export default Features;
+        </Container>
+        </Col>
+        ))}
+      </Row>
+      </Col>
+    </Row>
+    </div>
+        </Container>
+    )}
+
+export default PowerToolsPost;

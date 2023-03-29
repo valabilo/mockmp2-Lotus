@@ -73,9 +73,15 @@ function Header () {
             
           >
             <div class="navbar-custom navbar-nav">
-            <Nav.Link className="productLink" to="/products">PRODUCTS</Nav.Link>
-            <Nav.Link className="promotionLink" to="/promotions">PROMOTIONS</Nav.Link>
-            <Nav.Link className="servicesLink" to="/services">SERVICES</Nav.Link>
+              <Nav.Item>
+            <Nav.Link className="productLink" href="/products">PRODUCTS</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+            <Nav.Link className="promotionLink" href="/promotions">PROMOTIONS</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+            <Nav.Link className="servicesLink" href="/services">SERVICES</Nav.Link>
+            </Nav.Item>
             </div>
           </Nav>
           <Form className="d-flex my-auto">
