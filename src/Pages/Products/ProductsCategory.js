@@ -9,7 +9,7 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(9);
+  const [postsPerPage] = useState(15);
 
   useEffect(() => {
     const fetchPosts = async () => {

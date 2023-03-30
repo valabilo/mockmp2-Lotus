@@ -22,7 +22,7 @@ function Categories () {
                             POWER TOOLS
                         </h5>
                         <Nav.Link 
-                            to="/Products" 
+                            href="/products" 
                             className="cat-btn mt-3">
                             Shop Now
                         </Nav.Link>
@@ -43,7 +43,7 @@ function Categories () {
                                 HAND TOOLS
                                 </h5>
                             <Nav.Link 
-                                to="/Products" 
+                                href="/products" 
                                 className="cat-btn mt-3">
                                 Shop Now
                             </Nav.Link>
@@ -64,7 +64,7 @@ function Categories () {
                                 GARDEN TOOLS
                             </h5>
                             <Nav.Link 
-                                to="/Products" 
+                                href="/products" 
                                 className="cat-btn mt-3">
                                 Shop Now
                             </Nav.Link>
@@ -85,7 +85,7 @@ function Categories () {
                             HAND TOOLS
                             </h5>
                             <Nav.Link 
-                                to="/Products"
+                                href="/products"
                                 className="cat-btn mt-3">
                                 Shop Now
                             </Nav.Link>
@@ -102,7 +102,7 @@ function Categories () {
                             className="card-body text-justify ps-0 pt-0">
                             <h5 className="card-title fw-bolder">ACCESSORIES</h5>
                             <Nav.Link 
-                            to="/Products" 
+                            href="/products" 
                             className="cat-btn mt-3">
                             Shop Now
                             </Nav.Link>

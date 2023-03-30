@@ -1,8 +1,42 @@
-import { Container, Nav, Row, Col, Card, Dropdown, Button} from "react-bootstrap";
-import React from 'react';
-import CarouselImg from '../../db/lotusdb.json'
+import { Container, Nav, Row, Col, Card, InputGroup, Button, Form} from "react-bootstrap";
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
 
-const AllPosts = ({ products, loading }) => {
+const AllPosts = ({loading }) => {
+  const [data, setData] = useState([]);
+  const [value, setValue] = useState([]);
+
+  useEffect(() => {
+    loadUserData();
+  }, []);
+  const loadUserData = async () => {
+    return await axios.get("http://localhost:5001/products")
+    .then((response) => setData(response.data))
+    .then((err) => console.log(err));
+  };
+  console.log("data", data)
+
+  const handleReset = ()=>{
+    loadUserData();
+  }
+
+  const handleSearch = async (e)=>{
+    e.preventDefault();
+    return await axios.get(`http://localhost:5001/products?q=${value}`)
+    .then((res) => {
+      setData(res.data)
+      
+    })
+    .catch((e) => console.log(e))
+  }
+
+  const handleFilter = async (value)=>{
+    return await axios.get(`http://localhost:5001/products?prod_category=${value}&_order=asc`)
+    .then((res) => {
+      setData(res.data);
+    })
+    .catch((e) => console.log(e))
+  }
   if (loading) {
     return <h2>Loading...</h2>;
   }
@@ -16,67 +50,77 @@ const AllPosts = ({ products, loading }) => {
                   <Col md={3} class="pt-2 ps-5">
                       <h3 class="foot-font">PRODUCT CATEGORIES</h3>
                       <hr class="me-3"/> 
-                      <Nav.Link href="/products" active><p class="mt-3">All Products</p></Nav.Link>
-                      <Nav.Link href="/products/powertools"><p class="mt-3">Power Tools</p></Nav.Link>
-                      <Nav.Link href="/products/handtools"><p>Hand Tools</p></Nav.Link>
-                      <Nav.Link href="/products/gardentools"><p>Garden tools</p></Nav.Link>
-                      <Nav.Link href="/products/accessories"><p>Accessories</p></Nav.Link>
-                      <Nav.Link href="/products/safetygears"><p>Safety Gears</p></Nav.Link>
-                      <Nav.Link href="/products/spareparts"><p>Spare Parts</p></Nav.Link>
+                      <ul className="list-group list-group-flush pe-5">
+                        <li className="list-group-item ps-0"><Button className="" variant="link" onClick={() => handleReset()}>All Products</Button></li>
+                        <li className="list-group-item ps-0"><Button className="" variant="link" onClick={()=>handleFilter("power tools")} >Power Tools</Button></li>
+                        <li className="list-group-item ps-0"><Button className="" variant="link" onClick={()=>handleFilter("hand tools")} >Hand Tools</Button></li>
+                        <li className="list-group-item ps-0"><Button className="" variant="link" onClick={()=>handleFilter("garden tools")} >Garden tools</Button></li>
+                        <li className="list-group-item ps-0"><Button className="" variant="link" onClick={()=>handleFilter("accessories")}>Accessories</Button></li>
+                        <li className="list-group-item ps-0"><Button className="" variant="link" onClick={()=>handleFilter("safety gears")} >Safety Gears</Button></li>
+                        <li className="list-group-item ps-0"><Button className="" variant="link" onClick={()=>handleFilter("spare parts")} >Spare Parts</Button></li>
+                      </ul>
                   </Col>
         <Col md={9}>
           <Container >
             <Row>
-              <Col md={10}>
+              <Col md={8}>
               </Col>
-              <Col md={2}>
-            <Dropdown className="d-inline">
-              <Dropdown.Toggle  variant="outline-success" id="dropdown-autoclose-true" className="float-right">
-                Sort
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#">Electric Saw</Dropdown.Item>
-                <Dropdown.Item href="#">Drills</Dropdown.Item>
-                <Dropdown.Item href="#">Cordless</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+              <Col md={4}>
+                <Form onSubmit={handleSearch}>
+                <InputGroup
+                  type="text" 
+                  className="form-control w-100 border-0" 
+                  placeholder="Search Product Name"
+                  aria-label="Search Product"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  >
+                  <Button type='submit' variant="outline-warning">Search</Button>
+                  <Form.Control
+                    aria-label="Search Product"
+                  />
+                </InputGroup>
+                </Form>
+                
               </Col>
             </Row>
           </Container>
         <Row>
-          { CarouselImg && products.map (product => (
-          <Col xs={12} md={6} lg={4} key={product.id}>
+        {data.length === 0 ? (
+          <p>No Data Found</p>): (
+            data.map((item, index) => (
+          <Col xs={12} md={6} lg={4} key={index}>
               <Container fluid className="my-2">
                   <Card 
-                    // style={{height: 200em}}
+                    // style={{hlink: 200em}}
                     className=" border-0 ">
                     <Card.Img 
                       variant="top"
                       className="img-zoom"
-                      src={product.prod_img}
-                      alt={product.prod_name} />
+                      src={item.prod_img}
+                      alt={item.prod_name} />
                     <Card.Body 
                       className="h-100 m-0 p-0 mt-2" >
                       <Card.Title 
                         className="fw-bolder text-uppercase lh-1">
-                        {product.prod_name}  
+                        {item.prod_name}  
                       </Card.Title>
                       <Card.Subtitle className="fw-bolder">
-                        {product.prod_code}
+                        {item.prod_code}
                       </Card.Subtitle>
                       <div className="d-flex justify-content-between">
                         <Card.Text 
                           className="mt-3 mb-0 fw-bolder text-danger">
-                          {product.prod_description}!
+                          {item.prod_description}!
                         </Card.Text>
                         <div>
                           <Card.Text 
                             className="mt-2 mb-0 fw-bold text-">
-                            {`₱${product.prod_price}`}
+                            {`₱${item.prod_price}`}
                           </Card.Text>
                           <small 
                             className="mt-3 mb-0 fw-bolder text-muted">
-                            {`Stocks: ${product.stocks}`}
+                            {`Stocks: ${item.stocks}`}
                           </small>
                         </div>
                       </div>
@@ -84,13 +128,13 @@ const AllPosts = ({ products, loading }) => {
                     <Card.Footer 
                       className="d-flex justify-content-between">
                       <Nav.Link 
-                        disabled={product.stocks===0? true: false} 
+                        disabled={item.stocks===0? true: false} 
                         className="mt-2 mb-0 text-decoration-underline"> 
                         Add to Cart 
                       </Nav.Link>
                       <Button 
                         variant="warning text-secondary" 
-                        disabled={product.stocks===0? true: false}>
+                        disabled={item.stocks===0? true: false}>
                           BUY NOW
                       </Button>
                     </Card.Footer>
@@ -99,7 +143,8 @@ const AllPosts = ({ products, loading }) => {
                   
         </Container>
         </Col>
-        ))}
+        ))
+      )}
       </Row>
       </Col>
     </Row>
@@ -107,5 +152,5 @@ const AllPosts = ({ products, loading }) => {
         </Container>
     )
 }
-
 export default AllPosts;
+

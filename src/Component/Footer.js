@@ -77,7 +77,6 @@ function Footer () {
                             
                             </div>
                         </div>
-                        
                         <div>
                             <h3 class="foot-font">Follow Us</h3>
                         </div>
@@ -97,7 +96,7 @@ function Footer () {
                 </Col>
                 <Col md={4}>
                     <div className="foot">
-                        <Form className="footer-form">
+                        <Form  className="footer-form">
                             <h3 className="foot-font">Email Sign up</h3>
                                 <p className="my-1">Sign up to receive the latest info on new LOTUS products, special offers and more.</p>
                                 <table>
@@ -142,5 +141,4 @@ function Footer () {
         </section>
     );
 }
-
 export default Footer;

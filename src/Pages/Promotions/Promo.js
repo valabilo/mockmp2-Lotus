@@ -1,11 +1,12 @@
 import React,{ useEffect, useState, } from "react";
 import Slider from 'react-slick';
 import { Container, Card, Col, Row, Button, Nav} from "react-bootstrap";
+import promo from '../../assets/lazada-bg.png';
 
 import CarouselImg from '../../db/lotusdb.json'
 
 
-function Features () {
+function Promo () {
     const API_URL = 'http://localhost:5001/products';
     const [products, setProducts] = useState([]);
     const [fetchError, setFetchError] = useState(null);
@@ -105,18 +106,18 @@ function SamplePreviousArrow(props) {
   };
   return (
     <Container 
-      className="px-3">
+      className="px-3 mb-5">
       <h2 
-        className="fw-bolder feat-font text-start py-5 px-3"> 
-        FEATURED PRODUCTS
+        className="fw-bolder feat-font text-start py-3 px-3"> 
+        PROMO DEALS
       </h2>
       <Slider {...settings}>
         { isLoading && <p> Loading Items please wait... </p> } 
           { fetchError && <p style={ {color:"red" }}> { fetchError } </p> } 
-            { CarouselImg && products.filter(products => products.prod_description === "New Arrival").map( (filteredProducts)=>(
+            { CarouselImg && products.filter(products => products.promos === "on-sale").map( (filteredProducts)=>(
             <Row 
               xs={1} md={1} 
-              className="g-2 px-3 mt-2 align-items-stretch" 
+              className="g-2 px-3 mb-5 align-items-stretch" 
               key={filteredProducts.id}>
               <Col 
                 className="d-flex align-items-stretch">
@@ -145,12 +146,12 @@ function SamplePreviousArrow(props) {
                         <div>
                           <Card.Text 
                             className="mt-2 mb-0 fw-bold text-">
-                            {`₱${filteredProducts.prod_price}`}
+                             <small className="text-decoration-line-through me-3 text-danger">{`₱${filteredProducts.prod_price_before}`}</small>   
+                            <h5>{`₱${filteredProducts.prod_price}`}</h5>
                           </Card.Text>
-                          <small 
-                            className="mt-3 mb-0 fw-bolder text-muted">
-                            {`Stocks: ${filteredProducts.stocks}`}
-                          </small>
+                          <Card.Text className="text-end py-0 mt-1 mb-0 fw-bolder text-muted">
+                          {`Stocks: ${filteredProducts.stocks}`}
+                          </Card.Text>
                         </div>
                       </div>
                     </Card.Body>
@@ -161,7 +162,7 @@ function SamplePreviousArrow(props) {
                         className="mt-2 mb-0 text-decoration-underline"> 
                         Add to Cart 
                       </Nav.Link>
-                      <Button href="./checkout"
+                      <Button 
                         variant="warning text-secondary" 
                         disabled={filteredProducts.stocks===0? true: false}>
                           BUY NOW
@@ -172,7 +173,10 @@ function SamplePreviousArrow(props) {
               </Row>
           ))}
         </Slider>
+        <Container class="my-5">
+            <img class="mx-auto w-100 px-4" src={promo} alt="promo.jpg"/>
+        </Container>
     </Container>
   );
 }
-export default Features;
+export default Promo;

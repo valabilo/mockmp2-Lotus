@@ -246,21 +246,24 @@ swiper-slide img {
     width: 200px;
     height: 150px;
   }
-  /* }
-  .mycard {
-    min-width: 300px;
-    max-width: 300px;
-    height: 400px;
-    margin: 10px;
-    
+  .form-outline .form-control:focus~.form-notch .form-notch-leading {
+    border-top: .125rem solid #00B74A;
+    border-bottom: .125rem solid #00B74A;
+    border-left: .125rem solid #00B74A;
 }
-.slick-slide > div {
-  margin: 0 10px;
+ .form-outline .form-control:focus~.form-notch .form-notch-middle {
+    border-bottom: .125rem solid;
+    border-color: #00B74A;
 }
-.slick-list {
-  margin: 0 -10px;
-} */
 
+.form-outline .form-control:focus~.form-notch .form-notch-trailing {
+    border-color: currentcolor currentcolor currentcolor #00B74A;
+    border-bottom: .125rem solid #00B74A;
+    border-right: .125rem solid #00B74A;
+    border-top: .125rem solid #00B74A;
+}
 
-
+.form-outline .form-control:focus~.form-label {
+    color: #00B74A;
+}		
   

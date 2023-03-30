@@ -9,5 +9,7 @@ const Products = () => {
             <ProductsCategory />
         </div>
     )
+        
 }
+
 export default Products;

@@ -84,7 +84,7 @@ function Header () {
             </Nav.Item>
             </div>
           </Nav>
-          <Form className="d-flex my-auto">
+          {/* <Form className="d-flex my-auto">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -92,7 +92,7 @@ function Header () {
               aria-label="Search"
             />
             <Button variant="outline-light">Search</Button>
-          </Form>
+          </Form> */}
           <Navbar className="navbar-nav m-2">
                 <Nav.Link bg-none href="#modalScrollableCenter" data-bs-toggle="modal" onClick={handleShow} className="wish-zoom ms-auto nav-item nav-link">
                     <Image width="30px" height="30px" src="https://cdn3.iconfinder.com/data/icons/jolly-icons-free/64/cart_64.png" alt=""/><span className="badge bg-danger">1</span></Nav.Link>
@@ -116,11 +116,11 @@ function Header () {
                         <Button variant="primary" type="button" data-bs-target="" className="py-0 text-nowrap btn-sm text-light" data-href="checkout.html">Check-out</Button></div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={handleClose}>
-            Close
+          <Button className="util-btn" variant="warning text-light" href="./products" >
+            ADD MORE TO CART
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button className="util-btn" variant="success text-light" >
+            CHECK-OUT
           </Button>
         </Modal.Footer>
       </Modal>
@@ -140,7 +140,7 @@ function Header () {
               <FormLabel htmlFor="floatingPassword">Password</FormLabel>
             </FormFloating>
             <FormCheck type="checkbox" label="Remember me"/>
-              <Button className="w-100 my-2 btn btn-lg rounded-3 btn-warning" type="submit" onClick={ validateLogIn }>Sign in</Button>
+              <Button variant="warning" className="w-100 my-2 btn-lg rounded-3" type="submit" onClick={ validateLogIn }>Sign in</Button>
               <small className="text-muted">By clicking Sign in, you agree to the terms of use.</small>
               <hr className="my-4 mx-3" />
               <Link className="text-center text-dark text-decoration-none" to="/register" onClick={()=> setShowAcc(false)}><h4><span className="text-muted">Not a member? </span>Register</h4></Link>
