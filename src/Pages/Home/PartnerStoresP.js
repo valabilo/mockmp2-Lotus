@@ -25,7 +25,7 @@ function PartnerStoresP () {
     }, 300); //1k is 1 second
     }, []); //it will execute onpage load
     return (
-        <section class="mt-5 pt-5">
+        <section className="mt-5 pt-5">
         <Container className="h-100 mb-3">
             <h2 className="store-font text-center fw-bolder" >OUR PARTNER STORES</h2>
             <hr 

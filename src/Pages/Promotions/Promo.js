@@ -146,8 +146,8 @@ function SamplePreviousArrow(props) {
                         <div>
                           <Card.Text 
                             className="mt-2 mb-0 fw-bold text-">
-                             <small className="text-decoration-line-through me-3 text-danger">{`₱${filteredProducts.prod_price_before}`}</small>   
-                            <h5>{`₱${filteredProducts.prod_price}`}</h5>
+                             <small className="text-decoration-line-through me-3 text-muted ps-3">{`₱${filteredProducts.prod_price_before}`}</small>   
+                            <h5 className="fw-bolder text-success">{`₱${filteredProducts.prod_price}`}</h5>
                           </Card.Text>
                           <Card.Text className="text-end py-0 mt-1 mb-0 fw-bolder text-muted">
                           {`Stocks: ${filteredProducts.stocks}`}

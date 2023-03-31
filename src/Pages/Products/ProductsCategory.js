@@ -9,7 +9,7 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(15);
+  const [postsPerPage] = useState(9);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -32,9 +32,10 @@ const App = () => {
 
   return (
     <div className='container-fluid mt-5'>
-      <AllPosts products={currentPosts} loading={loading} />
+      <AllPosts data={currentPosts} loading={loading} />
       <Container>
-      <Row className="py-2 me-5">
+      {products.length > 9 && (
+        <Row className="py-2 me-5">
         <Col md={9} sm={12} >
         </Col>
         <Col md={3}>
@@ -45,6 +46,8 @@ const App = () => {
       />
         </Col>
       </Row>
+      )}
+      
       </Container>
     </div>
   );

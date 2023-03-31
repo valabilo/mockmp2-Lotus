@@ -72,7 +72,7 @@ function Header () {
             style={{ maxHeight: '100px' }}
             
           >
-            <div class="navbar-custom navbar-nav">
+            <div className="navbar-custom navbar-nav">
               <Nav.Item>
             <Nav.Link className="productLink" href="/products">PRODUCTS</Nav.Link>
             </Nav.Item>
@@ -94,7 +94,7 @@ function Header () {
             <Button variant="outline-light">Search</Button>
           </Form> */}
           <Navbar className="navbar-nav m-2">
-                <Nav.Link bg-none href="#modalScrollableCenter" data-bs-toggle="modal" onClick={handleShow} className="wish-zoom ms-auto nav-item nav-link">
+                <Nav.Link data-bs-toggle="modal" onClick={handleShow} className="wish-zoom ms-auto nav-item nav-link">
                     <Image width="30px" height="30px" src="https://cdn3.iconfinder.com/data/icons/jolly-icons-free/64/cart_64.png" alt=""/><span className="badge bg-danger">1</span></Nav.Link>
                 <Nav.Link className="ms-auto wish-zoom nav-item nav-link" onClick={handleShowAcc}>
                     <Image width="30px" height="30px" src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user-64.png" alt="Log in"/></Nav.Link>
@@ -102,7 +102,7 @@ function Header () {
         </Navbar.Collapse>
       </Container>
     
-    <Modal id="modalScrollableCenter" className='modal-lg modal-dialog-centered modal-dialog-scrollable shadow-lg' centered show={show} onHide={handleClose}>
+    <Modal id="modalScrollableCenter"className='modal-lg modal-dialog-centered modal-dialog-scrollable shadow-lg' centered show={show} onHide={handleClose}>
       
         <Modal.Header closeButton>
           <Modal.Title className='mx-3'>
@@ -119,7 +119,7 @@ function Header () {
           <Button className="util-btn" variant="warning text-light" href="./products" >
             ADD MORE TO CART
           </Button>
-          <Button className="util-btn" variant="success text-light" >
+          <Button className="util-btn" href="./checkout" variant="success text-light" >
             CHECK-OUT
           </Button>
         </Modal.Footer>
@@ -158,14 +158,11 @@ function Header () {
                 </div>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
+        {/* <Modal.Footer>
+          <Button variant="success text-light" onClick={handleClose} className="util-btn me-4" closeButton>
             Save Changes
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
        </Modal>
     </Navbar>
     </>

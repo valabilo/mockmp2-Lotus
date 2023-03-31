@@ -12,14 +12,13 @@ const Paginations = ({ postsPerPage, totalPosts, paginate }) => {
       <Pagination className="me-5">
         {pageNumbers.map(number => (
           <Pagination.Item key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href={(`'#'${number}`)} className='page-link' >
+            <p onClick={() => paginate(number)} href={(`'#'${number}`)} className='page-link' >
               {number}
-            </a>
+            </p>
           </Pagination.Item>
         ))}
       </Pagination>
     </nav>
   );
 };
-
 export default Paginations;

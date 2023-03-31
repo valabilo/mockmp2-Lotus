@@ -43,13 +43,13 @@ const AllPosts = ({loading }) => {
     return (
       <Container fluid className="mx-auto">
           <div className="mx-auto">
-          <h1 class="feat-font w-50 mx-auto mb-0">ALL PRODUCTS</h1>
+          <h1 className="feat-font w-50 mx-auto mb-0" >ALL PRODUCTS</h1>
           </div>
-          <div class="container mt-0">
+          <div className="container mt-0">
               <Row>
-                  <Col md={3} class="pt-2 ps-5">
-                      <h3 class="foot-font">PRODUCT CATEGORIES</h3>
-                      <hr class="me-3"/> 
+                  <Col md={3} className="pt-2 ps-5">
+                      <h3 className="foot-font">PRODUCT CATEGORIES</h3>
+                      <hr className="me-3"/> 
                       <ul className="list-group list-group-flush pe-5">
                         <li className="list-group-item ps-0"><Button className="" variant="link" onClick={() => handleReset()}>All Products</Button></li>
                         <li className="list-group-item ps-0"><Button className="" variant="link" onClick={()=>handleFilter("power tools")} >Power Tools</Button></li>
@@ -132,15 +132,13 @@ const AllPosts = ({loading }) => {
                         className="mt-2 mb-0 text-decoration-underline"> 
                         Add to Cart 
                       </Nav.Link>
-                      <Button 
+                      <Button href="./checkout"
                         variant="warning text-secondary" 
                         disabled={item.stocks===0? true: false}>
                           BUY NOW
                       </Button>
                     </Card.Footer>
                   </Card>
-                  
-                  
         </Container>
         </Col>
         ))

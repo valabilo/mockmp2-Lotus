@@ -19,7 +19,6 @@ const Home = () => {
             <PartnerStoresP />
             <PartnerStores />
             <SignIn />
-            
         </div>
     )
 }
