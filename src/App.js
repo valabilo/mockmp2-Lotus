@@ -6,6 +6,7 @@ import ProductsCategory from './Pages/Products/index'
 import Promotions from './Pages/Promotions';
 import CheckOut from './Pages/CheckOut/index';
 import Services from './Pages/Services';
+import MyAccount from "./Pages/myAccount";
 function App() {
   return (
     <RootLayout className="App">
@@ -16,6 +17,7 @@ function App() {
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/checkout" element={<CheckOut />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/myAccount" element={<MyAccount />} />
         </Routes>
     
     </RootLayout>
